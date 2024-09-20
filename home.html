@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home Page</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <!-- balance sheet -->
+        <section>
+            <div class="flex justify-evenly items-center mt-5">
+                <div class="stats shadow">
+                    <div class="stat">
+                        <div class="stat-value"><span id="previous-balance">89400</span>
+                            tk</div>
+                        <p class="mt-1">Available Balance</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <p>Log Out</p>
+                </div>
+            </div>
+            <div class="divider">
+            </div>
+
+            <!-- user action button -->
+            <div class="text-center p-5">
+                <div id="add-money" class="btn btn-lg">Add Money</div>
+                <div id="cash-out" class="btn btn-lg">Cash Out</div>
+            </div>
+
+            <div class="divider">
+            </div>
+
+            <!-- add money start -->
+            <div id="add-money-form" class=" flex-col justify-center items-center text-center p-5 ">
+                <form class="card-body lg:w-1/4 shadow-2xl rounded-xl">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Add Amount</span>
+                        </label>
+                        <input id="in-add-money" type="text" placeholder="Add Amount" class="input input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Your Pin</span>
+                        </label>
+                        <input id="password-pin" type="password" placeholder="Enter Your PIN"
+                            class="input input-bordered" required />
+                        <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot Your PIN?</a>
+                        </label>
+                    </div>
+                    <div class="form-control mt-6">
+                        <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                    </div>
+                </form>
+            </div>
+            <!-- add money end -->
+            <!-- cash out start -->
+            <div id="cash-out-form" class=" flex-col justify-center items-center text-center p-5 hidden">
+                <form class="card-body lg:w-1/4 shadow-2xl rounded-xl">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Cash Out Amount</span>
+                        </label>
+                        <input id="cash-out-money" type="text" placeholder="Cash Out Amount"
+                            class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Your Pin</span>
+                        </label>
+                        <input id="password-pin-cash-out" type="password" placeholder="Enter Your PIN"
+                            class="input input-bordered" required />
+                        <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot Your PIN?</a>
+                        </label>
+                    </div>
+                    <div class="form-control mt-6">
+                        <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                    </div>
+                </form>
+            </div>
+            <!-- cash out end -->
+        </section>
+    </main>
+
+
+    <script src="home.js"></script>
+</body>
+
+</html>

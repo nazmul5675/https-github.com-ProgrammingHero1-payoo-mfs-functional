@@ -1,8 +1,14 @@
 document.getElementById('log-in-btn').addEventListener('click', function (event) {
     event.preventDefault(); //its mean stop auto reload browser form tag default behavior
-    console.log('loginbtnclicked');
+
     const phoneNumber = document.getElementById('phone-number').value;
-    console.log(phoneNumber);
+
     const passwordPin = document.getElementById('password-pin').value;
-    console.log(passwordPin);
+
+    if (phoneNumber === '01760433111' && passwordPin === '1234') {
+        console.log('you are logged in successfully')
+        window.location.href = '/home.html'
+    } else {
+        alert("wrong phone number or PIN");
+    }
 })
